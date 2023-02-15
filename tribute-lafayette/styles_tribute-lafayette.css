@@ -1,0 +1,158 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Setting a base font size of 10px give us easier rem calculations
+       Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+     */
+  font-size: 10px;
+}
+
+body {
+  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #333;
+  background: #FFF3E2;
+}
+
+#topButton {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  z-index: 99;
+  font-size: 4rem;
+  font-weight: bolder;
+  border: solid 3px #EF4135;
+  outline: none;
+  background-color: #fff;
+  color: #007ecc;
+  cursor: pointer;
+  padding: 2px;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: all 0.25s;
+}
+
+#topButton:hover {
+  opacity: 100%;
+}
+
+.contentWrapper {
+  margin: 5vh 5vw;
+  align-items: center;
+}
+
+#title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+#portrait {
+  margin: 20px;
+}
+
+a:link {
+  color: #477ca7;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #477ca7;
+}
+
+a:hover {
+  color: #709dc2;
+  text-decoration: underline;
+}
+
+a:active{
+  color: #709dc2;
+}
+
+figcaption {
+  margin: 15px 0 5px 0;
+  font-style: italic;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 2vw;
+  row-gap: 2vh;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.card {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 40px;
+  padding: 20px 20px 30px 20px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.card h3 {
+  background: #eeeeec;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.card img {
+  margin: 20px 10px;
+  max-width: 80%;
+}
+
+ul {
+  text-align: left;
+  margin: 0px 5% 0px 7%;
+  line-height: 1.25;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.endSummary {
+  margin: 20px;
+}
+
+blockquote {
+  font-style: italic;
+  max-width: 545px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+}
+
+footer {
+  border-top: 3px dotted #ccc;
+  padding: 10px 10px 20px 10px;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  color: gray;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1080px) {
+  /* For tablets: */
+
+  .card {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+    padding: 20px 20px 30px 20px;
+    border-radius: 20px;
+    background: #fff;
+  }
+}
