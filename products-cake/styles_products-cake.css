@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* base font size 10px for rem calculations
+    1rem = 10px; 1.6 = 16px; etc. */
+  font-size: 10px;
+  scroll-padding-top: var(--scrollAnch-padding, 300px);
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+}
+
+.textBlock {
+  max-width: 60ch;
+  text-align:left;
+}
+
+#topButton {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 99;
+  font-size: 3rem;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  background-color: #b3ffff;
+  color: #000;
+  cursor: pointer;
+  padding: 0.25em;
+  opacity: 70%;
+  border-radius: 50%;
+  transition: all 0.25s;
+}
+
+#topButton:hover {
+  opacity: 100%;
+  box-shadow: 5px 5px 5px dimgray;
+}
+
+.topBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #808080;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: 20% auto;
+  background-color: #fffacd;
+  align-items: center;
+  align-content: center;
+  font-family: 'Henny Penny', cursive;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.logoGrid a:any-link {
+  color: black;
+  text-decoration: none;
+}
+
+.logoGrid div {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  display: flex;
+}
+
+.logoGridPic {
+  background-color: #a1126c;
+  padding: 10px;
+}
+
+.logoGrid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: solid 2px #ffff99;
+  padding: 1rem;
+}
+
+.menuBar {
+  width: 100%;
+  border-top: dotted 1rem #87CEFA;
+  background-color: #331a00;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 5px;
+  align-items: center;
+  font-weight: 500;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+nav li {
+  padding: 0px 2em;
+  border-right: solid 1px #87CEFA;
+}
+
+nav li:last-of-type {
+  margin: 0px;
+  border-right: none;
+}
+
+nav a:link, nav a:visited {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+  color: #ffffb3;
+  text-decoration: underline;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2vw 10vw;
+  padding: 0vh 5vw 2em 5vw;
+}
+
+.windowFrameShape {
+  height: auto;
+  border: solid 5px #c0c0c0;
+  border-radius: 50% 50% 0px 0px;
+  overflow: hidden;
+  text-align: center;  
+}
+
+.windowFrameShape img {
+  width: 40vw;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: -20px;
+  object-fit: cover;
+}
+
+.segment {
+  margin-top: 4em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template: auto / 30% auto;
+  text-align: left;
+  row-gap: 40px;
+  border-left: solid 5px #c0c0c0;
+  margin-left: 10px;
+}
+
+.servicesGrid div:nth-of-type(even) {
+  padding-left: 40px;
+}
+
+.servicesGrid h3 {
+  width: 100%;
+  padding-left: 0.5em;
+  background-color: #85fafa;
+}
+
+.galleryScroll {
+  width: 80%;
+  margin: 0 auto;
+  border: solid 10px #ccc;
+  padding: 5px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  column-gap: 5px;
+  background-color: #1a1100;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.galleryScroll img {
+  display: block;
+  height: 15em;
+  width: auto;
+  scroll-margin: 0px 25px;
+  scroll-snap-align: center;
+  object-fit: cover;
+}
+
+.galleryScroll img:first-of-type {
+  scroll-snap-align: end;
+  padding-left: 10px;
+  border-left: dotted 8px white;
+}
+
+.galleryScroll img:last-of-type {
+  scroll-snap-align: start;
+  padding-right: 10px;
+  border-right: dotted 8px white;
+}
+
+.galleryControls {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 10vw;
+  justify-content: center;
+}
+
+.galleryBtn {
+  font-size: 3em;
+  background-color: #fff;
+  border: none;
+  color: #78d641;
+  cursor: pointer;
+}
+
+.galleryBtn:hover {
+  color: #96e06c;
+}
+
+#msgUs {
+  margin-bottom: 2vw;
+}
+
+input {
+  width: 50%;
+  max-width: 1200px;
+  font-size: 1em;
+  padding: 0.25em;
+  margin: 10px;
+}
+
+.formBtn {
+  padding: .75em;
+  font-size: 1em;
+  border-radius: 10%;
+  background-color: #78d641;
+  cursor: pointer;
+}
+
+.formBtn:hover {
+  background-color: #96e06c;
+}
+
+footer {
+  border-top: 3px dotted grey;
+  padding: 10px 10px 20px 10px;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  color: gray;
+}
+
+footer a:any-link {
+  color: steelblue;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  /* For tablets: */
+  #topButton {
+    bottom: 80px;
+    right: 5px;
+  }
+
+  .servicesGrid {
+    grid-template: auto / auto;
+    row-gap: 10px;
+  }
+
+  .servicesGrid div:nth-of-type(even) {
+    margin-bottom: 40px;
+  }
+
+  .galleryScroll {
+      width: 100%;
+  }
+
+  .galleryScroll img {
+      height: 15em;
+      scroll-snap-stop: always;
+  }
+
+  .galleryControls {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  /* For mobile: */
+  #topButton {
+    bottom: 2px;
+    right: 5px;
+  }
+
+  .contentWrapper {
+    margin: 2em 0vw;
+  }
+
+  .logoGrid {
+    width: 100%;
+    font-size: 0.75em;
+  }
+  
+  nav {
+      font-size: 1.6rem;
+    }
+
+  nav li {
+    padding: 0px 1em;
+    text-align: center;
+  }
+
+  input {
+    width: 90%;
+  }
+
+}
+
+@supports(font:-apple-system-body) and (not(-webkit-touch-callout:default)){
+  /* Desktop Safari */
+  .logoGrid div {
+    height: auto;
+  }
+
+  .windowFrameShape {
+    margin-bottom: 5em;
+  }
+
+  .segment{
+    margin-bottom: 5em;
+  }
+
+  #ourWork, #services, #contact {
+    padding-top: 220px;
+    margin-top: -220px;
+  }
+}
