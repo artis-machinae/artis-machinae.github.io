@@ -1,0 +1,301 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans', sans-serif;
+  /* Setting a base font size of 10px give us easier rem calculations
+       Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+     */
+  font-size: 10px;
+  scroll-padding-top: var(--scrollAnch-padding, 200px);
+}
+
+body {
+  background: #2f2f37;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+#topButton {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 99;
+  font-size: 3rem;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  background-color: #00ffff;
+  color: #000;
+  cursor: pointer;
+  padding: 0.5em;
+  opacity: 70%;
+  border-radius: 25%;
+  transition: all 0.25s;
+}
+
+#topButton:hover {
+  opacity: 100%;
+}
+
+a:link,
+a:visited {
+  color: #006622;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #009933;
+  text-decoration: underline;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background: aquamarine;
+  background-image: linear-gradient(150deg, #ccffee, #99ffdd, #00e6e6);
+  z-index: 10;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.nav-list a:link,
+.nav-list a:visited {
+  display: block;
+  font-size: 2.5rem;
+  padding: 2rem;
+  color: #000033;
+  text-decoration: none;
+  transition: all 0.125s;
+}
+
+.nav-list a:hover,
+.navlist a:active {
+  color: aqua;
+  background-color: #000033;
+}
+
+.nav-list li {
+  border-right: dotted 1px #808080;
+}
+
+.nav-list li:last-of-type {
+  border-right: none;
+}
+
+.contentWrapper {
+  margin: 90px 10vw;
+}
+
+.logoBanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 2vw 6vw;
+  margin-bottom: 5em;
+  background: silver;
+  background-image: linear-gradient(130deg, white, gray, silver, white);
+}
+
+.logoBanner h2 {
+  width: 80%;
+  max-width: 600px;
+  padding: 1vw 2vw;
+  background-color: #808080;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.logoBanner img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.sectionHeader {
+  border-bottom: ridge 10px #5e5e6e;
+  border-radius: 0px 0px 500px 0px;
+  padding-left: 1vw;
+  margin: 5em 0 2em 0;
+  color: lightcyan;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2vw;
+  justify-content: space-around;
+}
+
+.projectTile {
+  width: 15vw;
+  min-width: 200px;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px 10px 25px 10px;
+  box-shadow: 5px 5px 5px 2px #0c0c0e;
+  transition: all 0.5s;
+  text-align: center;
+  font-size: 2.5rem;
+  overflow: hidden;
+}
+
+.projectTile img {
+  width: 100%;
+  height: auto;
+  opacity: 70%;
+  object-fit: cover;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+}
+
+.projectTile img:hover {
+  opacity: 100%;
+}
+
+.projectTile:hover {
+  box-shadow: 10px 10px 20px 10px #000000;
+}
+
+.formContainer {
+  width: 60vw;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  margin: 5px 0 30px 0;
+  width: 100%;
+  padding: 2px 5px;
+  font-size: 1.25em;
+  border: none;
+}
+
+#contactForm {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+form button {
+  width: fit-content;
+  padding: 1em 0.5em;
+  font-size: 2rem;
+  background-color: #00e6e6;
+  border: none;
+  border-radius: 5px;
+  opacity: 80%;
+  transition: all 0.25s;
+}
+
+form button:hover {
+  opacity: 100%;
+  background-color: #99ffdd;
+  box-shadow: 5px 5px 5px #000;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.aboutMe div {
+  margin: 0 auto 5vw auto;
+  max-width: 75ch;
+}
+
+.aboutMe p {
+  text-indent: 3ch;
+  margin-bottom: 2em;
+}
+
+.aboutMe h3 {
+  margin-bottom: 2vw;
+  width: 100%;
+  border-bottom: dashed 2px #595959;
+}
+
+footer {
+  border-top: 3px dotted #a7f7dc;
+  padding: 10px 10px 20px 10px;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  color: gray;
+}
+
+@media only screen and (max-width: 1080px) {
+  /* For tablets: */
+  .contentWrapper {
+    margin: var(--wrapperTopMargin, 100px) 5vw;
+  }
+
+  .projectsGrid {
+    gap: 10vw 2vw;
+  }
+
+  .formContainer {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  form button {
+    opacity: 100%;
+    background-color: #99ffdd;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  /* For mobile phones: */
+  .contentWrapper {
+    margin: var(--scrollAnch-padding, 100px) 2.5vw;
+  }
+
+  #topButton {
+    bottom: 20px;
+    right: 5px;
+    transition: none;
+  }
+  
+  .nav {
+    justify-content: center;
+  }
+
+  .projectTile {
+    width: 80%;
+  }
+
+  input,
+  textarea {
+    font-size: 1em;
+  }
+
+}
+
+@supports(font:-apple-system-body) and (not(-webkit-touch-callout:default)){
+  /* Desktop Safari */
+  .contentWrapper {
+    /* padding-top: 90px; */
+    width: auto;
+  }
+}
