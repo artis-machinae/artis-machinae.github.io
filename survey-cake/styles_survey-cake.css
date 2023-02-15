@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: white;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/00114jfCuisine_of_Bulacan_Food_Cakes_Delicaciesfvf_17.jpg/512px-00114jfCuisine_of_Bulacan_Food_Cakes_Delicaciesfvf_17.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+}
+
+a:link {
+  color: #604020;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #604020;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+   color: #996633;
+   text-decoration: underline;
+}
+
+#title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#description {
+  color: #fff2e6;
+  font-size: 2rem;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: center;
+}
+
+.header-image {
+  display: block;
+  margin: auto;
+  border: solid 10px #FFEFE0;
+  border-radius: 50% 50% 0% 0%;
+}
+
+.container {
+  border-radius: 10px;
+  margin: 0vh 5vw;
+  padding: 30px;
+  max-width: 980px;
+  background: #fff9f3;
+  overflow: auto;
+}
+
+.topHeader {
+  margin: 0px 0px 40px 0px;
+  padding: 5px 5px 10px 5px;
+  background: #663300;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 2vw;
+  row-gap: 2vh;
+}
+
+@media only screen and (max-width: 1050px) {
+  /* For tablets: */
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  /* For mobile phones: */
+  .grid-container {
+    grid-template-columns: auto;
+  }
+}
+
+.grid-item {
+  padding: 0px 30px 2px 0px;
+}
+
+.formLayout {
+  padding: 0px 0px 5px 0px;
+  font-size: 2rem;
+}
+
+.formField{
+  margin: 0px 0px 40px 0px;
+  width: 100%;
+  border: 2px solid #737373;
+  font-size: 2rem;
+}
+
+.hint {
+  font-style: italic;
+  font-size: 75%;
+  font-weight: 100;
+}
+
+.input-radio {
+  display: inline-block;
+  margin-right: 0.625rem;
+}
+
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 128px;
+  width: 90%;
+  padding: 0.75rem;
+  font-size: .75em;
+  resize: vertical;
+  border: none;
+}
+
+.form-button {
+  border-radius: 10%;
+  border: 5px outset #58595a;
+  padding: 10px 20px;
+  margin: 20px 20px auto auto;
+  background-color: #676869;
+  font-size: 1.75rem;
+  color: white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  color: #fef8cd;
+  box-shadow: 5px 10px 5px #000000;
+}
+
+.form-button:active {
+  color: #fef8cd;
+  background-color: #4c4d4d;
+  border: 5px groove #262627;
+  box-shadow: none;
+}
+
+footer {
+  margin-top: 5vh;
+  border-top: 3px dotted gray;
+  padding: 10px ;
+  font-size: 1rem;
+  font-variant: small-caps;
+  color: gray;
+}

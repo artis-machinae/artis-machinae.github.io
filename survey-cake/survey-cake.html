@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles_survey-cake.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Cake Survey | by Artis Machinae</title>
+    <meta name="author" content="Artis Machinae">
+    <meta name="description" content="Product page">
+  </head>
+  <body>
+    <div class="container">
+      <img class="header-image" width="128" alt="ASCII cake" src="https://upload.wikimedia.org/wikipedia/commons/5/50/ASCII_cake.jpg">
+      <header class="topHeader">
+        <h1 id="title">Cake Preferences Poll</h1>
+        <p id="description">Voice your opinions about cake!</p>
+      </header>
+      <form id="survey-form" method="post" action="?">
+        <div class="formLayout">
+          <label id="name-label" for="name">Name
+          </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="formField"
+              placeholder="Type your name"
+              title="Letters A-Z only"
+              required
+            />
+        </div>
+        <div class="formLayout">
+          <label id="email-label" for="email">email Address <span class="hint">required</span>
+          </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="formField"
+              placeholder="yourEmail@somewhere.net"
+              pattern="[a-z0-9._%=-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Your email address"
+              required
+            />
+        </div>
+        <div class="formLayout">
+          <label id="number-label" for="number">Age <span class="hint">(required; you must be at least 13 years old to use this poll.)</span>
+          </label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="13"
+            max="115"
+            class="formField"
+            placeholder="Select or type your age"
+            title="Minimum age of 13"
+          />
+        </div>
+        <div class="formLayout">
+          <p>How would you describe your feelings about cake in general?</p>
+          <select id="dropdown"
+          name="cakeFeelings"
+          class="formField"
+          required>
+            <option
+              disabled
+              selected
+              value>Select an option:
+            </option>
+            <option
+              value="nope">No thank you! Cake is gross!
+            </option>
+            <option
+              value="neutral">Meh - it's okay
+            </option>
+            <option
+              value="positive">I'm fairly fond of cake
+            </option>
+            <option
+              value="veryPositive">I love cake! I want to marry it!
+            </option>
+            <option
+              value="thereIsNoCake">The cake is a lie
+            </option>
+          </select>
+        </div>
+        <div class="formLayout">
+          <p>Have you ever made a cake yourself? <span class="hint">From scratch, from a boxed mix, etc.</span></p>
+          <label>
+            <input 
+              name="Bake"
+              value="yesBake" 
+              type="radio" 
+              class="input-radio"
+              checked
+            />Yes
+          </label>
+          <label>
+            <input 
+              name="Bake" 
+              value="noBake" 
+              type="radio" 
+              class="input-radio"
+            />No
+          </label>
+        </div>
+        <br>
+        <div class="formLayout">
+          <p>What types of cake do you like? <span class="hint">Select all that apply</span></p>
+        <div class="grid-container">
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="chocolate" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Chocolate</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="vanilla" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Vanilla</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="lemon" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Lemon</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="coconut" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Coconut</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="banana" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Banana</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="carrot" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Carrot</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="redvelvet" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Red Velvet</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="cheesecake" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Cheesecake</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="angelfood" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Angel Food</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="prefer" 
+              value="other" 
+              type="checkbox" 
+              class="input-checkbox"
+              />Other</label>
+          </div>
+          <div class="grid-item">
+            <label>
+              <input 
+              name="na"
+              value="n/a"
+              type="checkbox"
+              class="input-checkbox"
+              />No cakes!</label>
+          </div>
+        </div>
+        </div>
+        <br>
+        <div class="formLayout">
+          <p>Anything else you'd like to say about cake?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment(s) here..."
+          ></textarea>
+        </div>
+        <div class="formLayout">
+          <button type="submit" id="submit" class="form-button" onclick="alert('This survey is not active at this time. Thank you for playing.')">
+            Submit
+          </button>
+          <button type="reset" id="reset" class="form-button">
+            Clear
+          </button>
+        </div>
+      </form>
+      <footer>
+        <p>Page developed by <a href="https://artis-machinae.github.io" target="_blank"> Artis Machinae</a> &#8482; &#169; 2022 - <script>document.write(new Date().getFullYear());</script></p>
+      </footer>
+    </div>
+  </body>
+  </html>
