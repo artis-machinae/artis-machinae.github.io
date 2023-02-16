@@ -288,6 +288,19 @@ footer {
     justify-content: center;
   }
 
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 10em;
+  }
+
+  .nav-list a:link,
+  .nav-list a:visited {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
   .projectTile {
     width: 80%;
   }
