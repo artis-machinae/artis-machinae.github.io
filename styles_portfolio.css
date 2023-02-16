@@ -178,9 +178,16 @@ a:active {
 }
 
 .formContainer {
-  width: 60vw;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  background-color: #fff;
+}
+
+.formContainer iframe {
+  width: 100%;
+  height: 950px;
+  border: none;
 }
 
 input,
@@ -268,7 +275,7 @@ footer {
 @media only screen and (max-width: 450px) {
   /* For mobile phones: */
   .contentWrapper {
-    margin: var(--scrollAnch-padding, 100px) 2.5vw;
+    margin: 90px 2.5vw;
   }
 
   #topButton {
@@ -295,7 +302,6 @@ footer {
 @supports(font:-apple-system-body) and (not(-webkit-touch-callout:default)){
   /* Desktop Safari */
   .contentWrapper {
-    /* padding-top: 90px; */
     width: auto;
   }
 }
