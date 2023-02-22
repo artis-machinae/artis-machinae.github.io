@@ -63,7 +63,7 @@ a:active {
   left: 0;
   width: 100%;
   display: flex;
-  background: aquamarine;
+  background: #7fffd4;
   background-image: linear-gradient(150deg, #ccffee, #99ffdd, #00e6e6);
   z-index: 10;
 }
@@ -87,7 +87,7 @@ a:active {
 
 .nav-list a:hover,
 .navlist a:active {
-  color: aqua;
+  color: #00ffff;
   background-color: #000033;
 }
 
@@ -111,8 +111,8 @@ a:active {
   align-items: center;
   padding: 2vw 6vw;
   margin-bottom: 5em;
-  background: silver;
-  background-image: linear-gradient(130deg, white, gray, silver, white);
+  background: #c0c0c0;
+  background-image: linear-gradient(130deg, #fff, #808080, #c0c0c0, #fff);
 }
 
 .logoBanner h2 {
