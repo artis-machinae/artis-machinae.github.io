@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Artis Machinae">
+  <meta name="description" content="PHP and Wordpress examples">
+  <title>Artis Machinae | Developer</title>
+  <link rel="stylesheet" href="./styles_PHP_WP.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+  <button onclick="scrollToTop()" id="topButton" title="To Top of Page">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <nav id="navbar" class="nav">
+    <ul class="nav-list">
+      <li>
+        <a href="../index.html"><i class="bi bi-house-door-fill"></i></a>
+      </li>
+      <li>
+        <a href="#about">Description</a>
+      </li>
+      <li>
+        <a href="./PHP_WP.html">PHP Projects</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="contentWrapper">
+    <div class="logoBanner">
+      <div>
+        <img src="../AM-Logo5.png" alt="Artis Machinae">
+      </div>
+      <h2><a href="./wp-MCM.html">Wordpress Theme - MCM News</a></h2>
+  </div>
+
+  <div class="teaser-scr">
+    <figure>
+      <img src="MCM-index-blog.png" alt="MCM News header section"><figcaption>Index page of blog posts</figcaption>
+    </figure>
+  </div>
+
+  <div class="no-select the-code">
+    <pre>
+    <code>
+      &lt;?php get_header();?&gt;
+
+      &lt;div class="wrapper-mcmnews"&gt;
+      
+          &lt;div class="fp-grid-mcmnews"&gt;
+      
+              &lt;div class="sidearea-mcmnews"&gt;
+                  &lt;?php get_sidebar('mcmnews-condensed');?&gt;
+                  
+                  &lt;?php get_sidebar('mcmnews-full');?&gt;
+              &lt;/div&gt;
+      
+              &lt;div class="main-area-mcmnews"&gt;
+                  &lt;div&gt;
+                      &lt;?php get_template_part('includes/section', 'archive');?&gt;
+                  &lt;/div&gt;
+      
+                  &lt;div class="pagination-mcmnews"&gt;
+                      &lt;?php the_posts_pagination( array(
+                      'mid_size'  =&gt; 4,
+                      'before_page_number' =&gt; '',
+                    'after_page_number'  =&gt; '&nbsp;&bull;',
+                      'prev_text' =&gt; __( '&larr;  Prev' ),
+                      'next_text' =&gt; __( 'Next  &rarr;' ),
+                      )
+                      ); ?&gt;
+                  &lt;/div&gt;
+      
+              &lt;/div&gt;
+      
+          &lt;/div&gt;
+          
+      &lt;/div&gt;
+      
+          
+      &lt;?php get_footer();?&gt;
+    </code>
+    </pre>
+  </div></div>
+
+  <footer>
+    <p>Page developed by <a href="https://artis-machinae.github.io" target="_blank"> Artis Machinae</a> &#8482;. Logo and design &#169; 2022 - <script>document.write(new Date().getFullYear());</script></p>
+  </footer>
+
+  <script src="../main-index.js" defer></script> 
+
+</body>
+</html>
