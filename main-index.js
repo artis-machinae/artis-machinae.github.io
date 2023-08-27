@@ -28,3 +28,22 @@ function stickyHeightUpdate() {
 
 window.addEventListener("load", stickyHeightUpdate);
 window.addEventListener("resize", stickyHeightUpdate);
+
+// modal stuff
+function openModal() {
+    document.getElementById("theModal").style.display="block";
+}
+
+function closeModal() {
+    document.getElementById("theModal").style.display ="none";
+}
+
+const scrImgList = document.getElementsByClassName("modal-preview-img");
+
+const theBigPicture = document.getElementById("modal-content");
+
+function currentImg(n) {
+    i = (n - 1);
+    console.log(scrImgList[i].src);
+    theBigPicture.setAttribute("src", scrImgList[i].src);
+}
