@@ -39,9 +39,14 @@
       <h2><a href="./wp-MCM.html">Wordpress Theme - MCM News</a></h2>
   </div>
 
-  <div class="teaser-scr">
+  <div id="theModal" class="modal-box">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img id="modal-content" src="" alt="preview">
+  </div>
+
+  <div class="teaser-gallery">
     <figure>
-      <img src="MCM-header.png" alt="MCM News header section" onclick="openModal();currentImg(1)">
+      <img class="modal-preview-img gallery-img-large" src="MCM-header.png" alt="MCM News header section" onclick="openModal();currentImg(1)">
       <figcaption>The header with responsive layout</figcaption>
     </figure>
   </div>

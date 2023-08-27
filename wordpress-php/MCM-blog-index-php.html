@@ -5,6 +5,7 @@
   <meta name="author" content="Artis Machinae">
   <meta name="description" content="PHP and Wordpress examples">
   <title>Artis Machinae | Developer</title>
+  <link rel="stylesheet" href="../styles_portfolio.css" />
   <link rel="stylesheet" href="./styles_PHP_WP.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,9 +39,15 @@
       <h2><a href="./wp-MCM.html">Wordpress Theme - MCM News</a></h2>
   </div>
 
-  <div class="teaser-scr">
+  <div id="theModal" class="modal-box">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img id="modal-content" src="" alt="preview">
+  </div>
+
+  <div class="teaser-gallery">
     <figure>
-      <img src="MCM-index-blog.png" alt="MCM News header section"><figcaption>Index page of blog posts</figcaption>
+      <img class="modal-preview-img gallery-img-large" src="MCM-index-blog.png" alt="MCM News header section" onclick="openModal();currentImg(1)">
+      <figcaption>Index page of blog posts</figcaption>
     </figure>
   </div>
 
