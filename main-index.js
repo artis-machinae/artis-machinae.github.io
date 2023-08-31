@@ -44,6 +44,5 @@ const theBigPicture = document.getElementById("modal-content");
 
 function currentImg(n) {
     i = (n - 1);
-    console.log(scrImgList[i].src);
     theBigPicture.setAttribute("src", scrImgList[i].src);
 }

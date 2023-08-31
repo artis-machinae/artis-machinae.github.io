@@ -117,14 +117,32 @@ a:active {
   padding: 20px 0;
 }
 
+.teaser-img-small,
 .gallery-img-small {
   height: 10vw;
   min-height: 50px;
   box-shadow: 5px 5px 5px #000;
 }
 
+.teaser-img-med,
+.gallery-img-med {
+  height: 20vw;
+  min-height: 50px;
+  box-shadow: 5px 5px 5px #000;
+}
+
+.teaser-img-large, 
 .gallery-img-large {
-  width: 70%;
+  height: 30vw;
+  min-height: 100px;
+  box-shadow: 5px 5px 5px #000;
+}
+
+.gallery-img-large:hover,
+.gallery-img-med:hover,
+.gallery-img-small:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 10px #000;
 }
 
 .modal-box {
