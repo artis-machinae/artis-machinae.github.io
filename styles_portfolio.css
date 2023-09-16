@@ -223,6 +223,10 @@ a:active {
   color: lightcyan;
 }
 
+.sectionHeader:first-of-type {
+  margin: 2em 0 2em 0;
+}
+
 .projectsGrid {
   display: flex;
   flex-flow: row wrap;
