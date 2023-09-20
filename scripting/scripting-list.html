@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Artis Machinae">
+  <meta name="description" content="PHP and Wordpress examples">
+  <title>Artis Machinae | Developer</title>
+  <link rel="stylesheet" href="../styles_portfolio.css" />
+  <link rel="stylesheet" href="./styles_PHP_WP.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+  <button onclick="scrollToTop()" id="topButton" title="To Top of Page">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <nav id="navbar" class="nav">
+    <ul class="nav-list">
+      <li>
+        <a href="/index.html" title="Home"><i class="bi bi-house-door-fill"></i></a>
+      </li>
+      <li>
+        <a href="/index.html#projects" title="Projects">Projects</a>
+      </li>
+      <li>
+        <a href="/index.html#contact" title="Contact me">Contact</a>
+      </li>
+      <li>
+        <a href="/index.html#about" title="About me">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="contentWrapper">
+    <div class="logoBanner">
+      <div>
+        <img src="../AM-Logo5.png" alt="Artis Machinae">
+      </div>
+      <h2>Scripting Projects</h2>
+    </div>
+
+    <div id="theModal" class="modal-box">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img id="modal-content" src="#" alt="preview">
+    </div>
+
+    <div class="sectionHeader">
+      <h2>Ye Olde Batch Files (.bat)</h2>
+    </div>
+
+    <div class="projectsGrid">
+
+      <div class="projectTile">
+        <a href="https://github.com/artis-machinae/flair-deploy" title="Flair Deploy repository" id="tile1" target="blank">
+          <figure>
+            <img src="/scripting/scr-flair_deploy.png" alt="PHP & Wordpress projects">
+            <figcaption>Flair Deploy <small><sup><i class="bi bi-box-arrow-up-right"></i></sup></small><br></figcaption>
+          </figure>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+<footer>
+  <p>Page developed by <a href="https://artis-machinae.github.io" target="_blank"> Artis Machinae</a> &#8482;. Logo and design &#169; 2022 - <script>document.write(new Date().getFullYear());</script></p>
+</footer>
+
+<script src="../main-index.js" defer></script> 
+
+</body>
+</html>

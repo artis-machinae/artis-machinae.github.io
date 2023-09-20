@@ -92,11 +92,15 @@ a:active {
 }
 
 .nav-list li {
-  border-right: dotted 1px #808080;
+  border-right: dotted 1px #636363;
 }
 
 .nav-list li:last-of-type {
   border-right: none;
+}
+
+.lilli-text {
+  font-size: 70%;
 }
 
 .contentWrapper {
@@ -141,9 +145,9 @@ a:active {
 .gallery-img-large:hover,
 .gallery-img-med:hover,
 .gallery-img-small:hover {
-  cursor: pointer;
   box-shadow: 10px 10px 10px #000;
 }
+
 
 .modal-box {
     display: none;
@@ -157,36 +161,40 @@ a:active {
     background-color: rgba(0,0,0,0.72);
     backdrop-filter: blur(10px) grayscale(1);
     overflow: scroll;
-  }
+}
 
-  #modal-content {
-    position: relative;
-    margin: 10vw auto;
-    display: block;
-    max-height: 70%;
-    max-width: 100%;
-  }
-  
-  .modal-close {
-    position: absolute;
-    z-index: 99;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 2rem;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .modal-close::before {
-    content: "close  ";
-  }
-  
-  .modal-close:hover {
-    color: #00e6e6;
-    text-decoration: none;
-    cursor: pointer;
-  }
+#modal-content {
+  position: relative;
+  margin: 10vw auto;
+  display: block;
+  max-height: 70%;
+  max-width: 100%;
+}
+
+.modal-close {
+  position: absolute;
+  z-index: 99;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal-close::before {
+  content: "close  ";
+}
+
+.modal-close:hover {
+  color: #00e6e6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-preview-img:hover {
+  cursor: zoom-in;
+}
 
 .logoBanner {
   display: flex;
@@ -378,7 +386,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 640px) {
   /* For mobile phones: */
   .contentWrapper {
     margin: 90px 2.5vw;

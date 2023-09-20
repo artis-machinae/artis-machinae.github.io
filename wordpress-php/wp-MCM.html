@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Artis Machinae">
-  <meta name="description" content="PHP and Wordpress examples">
+  <meta name="description" content="PHP and WordPress examples">
   <title>Artis Machinae | Developer</title>
   <link rel="stylesheet" href="../styles_portfolio.css" />
   <link rel="stylesheet" href="./styles_PHP_WP.css" />
@@ -20,13 +20,19 @@
   <nav id="navbar" class="nav">
     <ul class="nav-list">
       <li>
-        <a href="../index.html"><i class="bi bi-house-door-fill"></i></a>
+        <a href="/index.html#" title="Home"><i class="bi bi-house-door-fill"></i></a>
       </li>
       <li>
-        <a href="#about">Description</a>
+        <a href="/index.html#projects" title="Projects">Projects</a>
       </li>
       <li>
-        <a href="PHP_WP.html">PHP Projects</a>
+        <a href="/wordpress-php/PHP_WP.html#projects" title="PHP & WordPress projects"><span class="lilli-text">&#8658;&nbsp;PHP Projects</span></a>
+      </li>
+      <li>
+        <a href="/index.html#contact" title="Contact me">Contact</a>
+      </li>
+      <li>
+        <a href="/index.html#about" title="About me">About</a>
       </li>
     </ul>
   </nav>
@@ -36,17 +42,17 @@
       <div>
         <img src="../AM-Logo5.png" alt="Artis Machinae">
       </div>
-      <h2><a href="#">Wordpress Theme - MCM News</a></h2>
+      <h2><a href="#">WordPress Theme - &quot;MCM News&quot;</a></h2>
     </div>
 
     <div id="theModal" class="modal-box">
-      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <span class="modal-close" onclick="closeModal()">&nbsp;<i class="bi bi-x-square-fill"></i></span>
       <img id="modal-content" src="#" alt="preview">
     </div>
 
     <div class="teaser-gallery">
       <figure>
-        <img class="modal-preview-img gallery-img-med" src="MCM-front-page.png" alt="MCM News" onclick="openModal();currentImg(1)">
+        <img class="modal-preview-img gallery-img-med" src="MCM-front-page.png" alt="MCM News - Front Page" onclick="openModal();currentImg(1)">
         <figcaption>Front Page - full view</figcaption>
       </figure>
     </div>
@@ -57,7 +63,7 @@
       </div>
       <div class="aboutMe">
         <div>
-          <p>This is a theme I developed for Wordpress, named "MCM News". The inspiration for this theme was old newspaper formats, harkening back to the days of hard-hitting journalism and the experience of daily news being a tangible item.</p>
+          <p>This is a theme I developed for WordPress, named "MCM News". The inspiration for this theme was old newspaper formats, harkening back to the days of hard-hitting journalism and the experience of daily news being a tangible item.</p>
           <p>Below you may see samples of the code for some of the theme files.</p>
         </div>
       </div>
@@ -69,22 +75,20 @@
       </div>
       <div class="projectsGrid">
         <div class="projectTile">
-          <a href="MCM-header-php.html" id="tile1">
+          <a href="MCM-header-php.html" title="header.php file" id="tile1">
             <figure>
               <img src="/wordpress-php/MCM-header.png" alt="header file">
-              <figcaption>header.php</figcaption>
+              <figcaption>header.php<br>&quot;MCM News&quot;</figcaption>
             </figure>
-            <p>~ MCM News ~</p>
           </a>
         </div>
 
         <div class="projectTile">
-          <a href="MCM-blog-index-php.html" id="tile2">
+          <a href="MCM-blog-index-php.html" title="index.php file" id="tile2">
             <figure>
               <img src="MCM-index-blog.png" alt="blog index file">
-              <figcaption>index.php</figcaption>
+              <figcaption>index.php<br>&quot;MCM News&quot;</figcaption>
             </figure>
-              <p>~ MCM News ~</p>
           </a>
         </div>
 
