@@ -370,6 +370,10 @@ footer {
     margin: var(--wrapperTopMargin, 100px) 5vw;
   }
 
+  .navi-trail {
+    display: none;
+  }
+
   .projectsGrid {
     gap: 10vw 2vw;
   }
@@ -397,23 +401,29 @@ footer {
     right: 5px;
     transition: none;
   }
-  
-  .nav {
-    justify-content: center;
-  }
 
   .nav-list {
     list-style-type: none;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     font-size: 10em;
   }
 
+  .nav-list li {
+    border: none;
+  }
+  
   .nav-list a:link,
   .nav-list a:visited {
     font-size: 2rem;
     padding: 1rem;
-}
+  }
+
+
+  #modal-content {
+    margin: 25vw auto;
+    max-height: 80%;
+  }
 
   .projectTile {
     width: 80%;
@@ -422,6 +432,27 @@ footer {
   input,
   textarea {
     font-size: 1em;
+  }
+
+  .teaser-img-small,
+  .gallery-img-small {
+    height: 20vw;
+    min-height: 50px;
+    box-shadow: 5px 5px 5px #000;
+  }
+
+  .teaser-img-med,
+  .gallery-img-med {
+    height: 40vw;
+    min-height: 50px;
+    box-shadow: 5px 5px 5px #000;
+  }
+
+  .teaser-img-large, 
+  .gallery-img-large {
+    height: 60vw;
+    min-height: 100px;
+    box-shadow: 5px 5px 5px #000;
   }
 
   .the-code {
