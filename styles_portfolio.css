@@ -7,6 +7,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #2f2f37;
+  --text-color: #fff;
+  --button-color: #00ffff;
+  --link-hover-color: #00626D;
+  --link-color: #2E3799;
+  --topnav-bg-color: #99ffdd;
+  --topnav-link-color: #000033;
+  --topnav-link-hover: #00ffff;
+  --topnav-link-hover-bg: #000033;
+  --logo-banner-label: #4b4b4b;
+  --codebox-bg: #e9e9e9;
+  --codebox-text: #000;
+}
+
 html {
   font-family: 'Noto Sans', sans-serif;
   /* Setting a base font size of 10px give us easier rem calculations
@@ -17,9 +32,9 @@ html {
 }
 
 body {
-  background: #2f2f37;
+  background: var(--bg-color);
   font-size: 1.8rem;
-  color: #fff;
+  color: var(--text-color);
 }
 
 #topButton {
@@ -32,7 +47,7 @@ body {
   font-weight: bolder;
   border: none;
   outline: none;
-  background-color: #00ffff;
+  background-color: var(--button-color);
   color: #000;
   cursor: pointer;
   padding: 0.5em;
@@ -47,13 +62,13 @@ body {
 
 a:link,
 a:visited {
-  color: #006622;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-  color: #009933;
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
@@ -63,7 +78,7 @@ a:active {
   left: 0;
   width: 100%;
   display: flex;
-  background: #7fffd4;
+  background: var(--topnav-bg-color);
   background-image: linear-gradient(150deg, #ccffee, #99ffdd, #00e6e6);
   z-index: 10;
 }
@@ -80,15 +95,15 @@ a:active {
   display: block;
   font-size: 2.5rem;
   padding: 2rem;
-  color: #000033;
+  color: var(--topnav-link-color);
   text-decoration: none;
   transition: all 0.125s;
 }
 
 .nav-list a:hover,
-.navlist a:active {
-  color: #00ffff;
-  background-color: #000033;
+.nav-list a:active {
+  color: var(--topnav-link-hover);
+  background-color: var(--topnav-link-hover-bg);
 }
 
 .nav-list li {
@@ -212,9 +227,11 @@ a:active {
   width: 80%;
   max-width: 600px;
   padding: 1vw 2vw;
-  background-color: #808080;
+  background-color: var(--logo-banner-label);
   text-align: center;
   font-size: 2rem;
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
 }
 
 .logoBanner img {
@@ -284,8 +301,8 @@ a:active {
   width: 75%;
   height: 40vw;
   padding: 10px;
-  background-color: #e9e9e9;
-  color: #000;
+  background-color: var(--codebox-bg);
+  color: var(--codebox-text);
   font-family: 'Courier New', Courier, monospace;
   overflow: scroll;
   scrollbar-color: #000000;
