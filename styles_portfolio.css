@@ -72,6 +72,10 @@ a:active {
   text-decoration: underline;
 }
 
+.darkModeLink {
+  background-color: #FFF;
+}
+
 .nav {
   position: fixed;
   top: 0;
